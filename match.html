@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="description" content="Prepare a Helping Hands tutor request with your AP course, teacher, and study goals.">
+  <title>Find a tutor · Helping Hands Peer Tutoring</title>
+  <link rel="icon" type="image/png" href="./assets/mark.png">
+  <link rel="preload" href="./assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./site-config.js"></script>
+  <script defer src="./site.js"></script>
+  <script defer src="./match.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="./index.html" aria-label="Helping Hands Peer Tutoring home">
+        <img src="./assets/mark.png" width="44" height="44" alt="">
+        <span class="wordmark-type"><strong>Helping Hands</strong><span>Peer Tutoring</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+        <span>Menu</span><span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="./index.html#subjects">Subjects</a>
+        <a href="./index.html#how-it-works">How it works</a>
+        <a href="./index.html#recommendations">Recommendations</a>
+        <a class="button button-outline nav-action" href="./match.html" aria-current="page">Find a tutor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap match-layout">
+    <div class="match-intro">
+      <p class="eyebrow"><span aria-hidden="true"></span>Tutor matching</p>
+      <h1>Start with<br><em>your class.</em></h1>
+      <p>We look for a peer who excelled in your course with your teacher. Tell us what you’re taking and what you’d like to work on.</p>
+      <aside class="handoff-note">
+        <h2>Sharing your request</h2>
+        <p data-handoff-note>The tutoring inbox is a placeholder for now. You can save or copy your finished request and give it to the Helping Hands team.</p>
+      </aside>
+    </div>
+
+    <div class="request-sheet">
+      <form id="match-form">
+        <h2>Your tutor request</h2>
+        <div class="field">
+          <label for="course">AP course</label>
+          <div class="select-wrap">
+            <select id="course" name="course" required>
+              <option value="" disabled selected>Choose your course</option>
+              <option value="biology">AP Biology</option>
+              <option value="chemistry">AP Chemistry</option>
+              <option value="calculus">AP Calculus</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="teacher">Your teacher’s name</label>
+          <input id="teacher" name="teacher" type="text" placeholder="e.g. Ms. Rivera" maxlength="100" required>
+        </div>
+        <fieldset class="support-field">
+          <legend>What kind of help would you like?</legend>
+          <label><input name="support" type="radio" value="Weekly tutoring" checked>Weekly tutoring</label>
+          <label><input name="support" type="radio" value="Practice materials">Practice materials</label>
+          <label><input name="support" type="radio" value="Exam review">Exam review</label>
+        </fieldset>
+        <div class="field">
+          <label for="student">Your first name <span>(optional)</span></label>
+          <input id="student" name="student" type="text" autocomplete="given-name" maxlength="80">
+        </div>
+        <div class="field">
+          <label for="goal">What’s on your mind? <span>(optional)</span></label>
+          <textarea id="goal" name="goal" rows="3" maxlength="600" placeholder="A tricky concept, a recent assignment, or an upcoming test…"></textarea>
+        </div>
+        <button type="submit" class="button button-primary" id="create-request" disabled>Create my request</button>
+        <noscript><p>Enable JavaScript to create a downloadable request, or write down your course, teacher, and study goal to share with the team.</p></noscript>
+      </form>
+
+      <section id="request-result" aria-labelledby="result-title" hidden>
+        <h2 id="result-title" tabindex="-1">Your request is ready.</h2>
+        <p class="result-intro">Review your details, then share them with the tutoring team.</p>
+        <dl id="request-summary" class="request-summary"></dl>
+        <div class="result-actions">
+          <a class="button button-primary" id="email-request" hidden>Open email draft</a>
+          <a class="button button-primary" id="download-request" download="helping-hands-tutor-request.txt">Download request</a>
+          <button type="button" class="button button-outline" id="copy-request">Copy text</button>
+          <button type="button" class="button button-outline" id="share-request" hidden>Share request</button>
+        </div>
+        <div id="manual-copy" class="field" hidden>
+          <label for="copy-text">Select and copy your request</label>
+          <textarea id="copy-text" rows="7" readonly></textarea>
+        </div>
+        <p id="request-status" class="request-status" role="status"></p>
+        <button type="button" class="text-link" id="edit-request">Edit my request</button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="./index.html" aria-label="Helping Hands Peer Tutoring home">
+        <img src="./assets/mark.png" width="44" height="44" alt="">
+        <span class="wordmark-type"><strong>Helping Hands</strong><span>Peer Tutoring</span></span>
+      </a>
+      <div class="footer-contact">
+        <span class="contact-label">Tutoring inbox <span data-placeholder-label>(placeholder)</span></span>
+        <span data-contact-address>tutoring@example.org</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
