@@ -225,7 +225,7 @@ h1 em, .section-heading em, .program-intro em {
 .chemistry-cover { background: #f0e3c6; }
 .calculus-cover { background: #dce6ee; }
 .course-copy { display: flex; flex: 1; flex-direction: column; align-items: start; padding: 1.2rem .15rem 0; }
-.course-copy h3, .note-card h3 { font-size: clamp(1.42rem, 1.95vw, 1.95rem); font-weight: 650; letter-spacing: -.05em; line-height: 1.15; }
+.course-copy h3 { font-size: clamp(1.42rem, 1.95vw, 1.95rem); font-weight: 650; letter-spacing: -.05em; line-height: 1.15; }
 .course-copy p { margin: .63rem 0 .65rem; max-width: 36ch; color: var(--muted); font-size: 1.025rem; line-height: 1.57; }
 .course-copy .text-link { margin-top: auto; }
 
@@ -251,10 +251,16 @@ h1 em, .section-heading em, .program-intro em {
 }
 .process-list h3 { padding-top: .12rem; font-size: clamp(1.22rem, 1.65vw, 1.6rem); font-weight: 600; letter-spacing: -.038em; }
 .process-list p { max-width: 52ch; margin-top: .4rem; line-height: 1.57; color: #deded6; font-size: 1.03rem; }
-.notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 2.2vw, 2rem); }
-.note-card { position: relative; border: 1px solid var(--rule); border-top: 3px solid var(--ink); padding: 1.5rem 1.7rem 1.6rem; background: var(--sheet); }
-.note-card h3 { font-size: 1.36rem; }
-.note-lines { height: 3.7rem; margin-top: .6rem; background: repeating-linear-gradient(transparent 0, transparent calc(1.5rem - 1px), #dedbd3 calc(1.5rem - 1px), #dedbd3 1.5rem); }
+.notes-heading { font-size: 1.2rem; font-weight: 650; letter-spacing: -.035em; }
+.notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: clamp(1rem, 2.2vw, 2rem); margin-top: 1rem; }
+.note-card { border: 1px solid var(--rule); border-top: 3px solid var(--ink); padding: 1.5rem 1.7rem 1.6rem; background: var(--sheet); }
+.note-card h4 { margin: 0 0 1rem; font-size: 1.45rem; font-weight: 650; letter-spacing: -.045em; line-height: 1.15; }
+.teacher-note blockquote { margin: 0; font-size: 1.05rem; line-height: 1.65; }
+.teacher-note figcaption { display: flex; align-items: baseline; gap: .6rem; margin-top: .7rem; color: var(--muted); font-size: .95rem; font-weight: 600; }
+.teacher-note figcaption::before { content: ""; width: 1.1rem; height: 2px; flex: none; align-self: start; margin-top: .63em; background: var(--red); }
+.teacher-note + .teacher-note { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+.student-notes { margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+.student-notes p { margin-top: .35rem; color: var(--muted); line-height: 1.55; }
 .site-footer { border-top: 1px solid var(--rule); }
 .footer-inner { padding-block: 2.25rem; }
 .footer-contact { display: grid; gap: .22rem; font-size: 1rem; }
@@ -365,7 +371,7 @@ h1 em, .section-heading em, .program-intro em {
   .program-intro > p { max-width: 46ch; }
   .process-list li { gap: .7rem; }
   .note-card { padding: 1.15rem; }
-  .notes-grid { gap: .9rem; }
+  .notes-grid { grid-template-columns: 1fr; gap: .9rem; }
   .footer-inner { flex-wrap: wrap; gap: 1.4rem; }
   .match-layout { padding-block: 2.6rem; }
   .match-intro h1 { font-size: clamp(3.45rem, 9.4vw, 4.7rem); }
@@ -377,7 +383,6 @@ h1 em, .section-heading em, .program-intro em {
   .hero-actions .button { padding-inline: 1rem; }
   .hero-actions > a { font-size: .9375rem; }
   .eyebrow { font-size: .75rem; letter-spacing: .07em; }
-  .notes-grid { grid-template-columns: 1fr; }
   .course-card { grid-template-columns: minmax(5rem, .4fr) 1fr; gap: .85rem; }
 }
 
